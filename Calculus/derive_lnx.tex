@@ -1,0 +1,43 @@
+\ifdefined\MASTERDOCUMENT
+\else
+\documentclass{article}
+\input{header}
+\begin{document}
+
+Derivations of $\D{\ln x}{x}$
+
+
+
+1. Using the definition of derivative
+
+\begin{eqnarray*}
+  \D{f}{x} & = & \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \\ 
+  \D{\ln x}{x} & = & \lim_{h \to 0} \frac{\ln(x+h)-\ln(x)}{h} \\ 
+  \text{Using difference property of $\ln$ logarthms} \\
+  & = & \lim_{h \to 0} \frac{1}{h}\ln(\frac{x+h}{x}) \\ 
+  & = & \lim_{h \to 0} \ln\left(\frac{x+h}{x}\right)^{\frac{1}{h}} \\ 
+  & = & \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}} \\ 
+\text{Substitute $u = \frac{x}{h}$ } \\
+   & = & \lim_{h \to 0} \ln\left(1 + \frac{1}{u}\right)^{\frac{u}{x}} \\ 
+   & = & \lim_{h \to 0} \ln\left(\left(1 + \frac{1}{u}\right)^{u}\right)^{\frac{1}{x}} \\
+   & = & \lim_{h \to 0} \ln\left(e)^{\frac{1}{x}} \\
+   & = & \lim_{h \to 0} \frac{1}{x} \\
+   & = & \frac{1}{x} \\
+\end{eqnarray*}
+
+
+
+
+
+
+
+
+
+
+
+\fi
+\ifdefined\MASTERDOCUMENT
+\endinput
+\else
+\expandafter\enddocument
+\fi
