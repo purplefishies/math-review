@@ -2,6 +2,8 @@
 \else
 \documentclass{article}
 \input{header}
+\DeclareMathOperator\atanh{atanh}
+\usepackage[makeroom]{cancel}
 \begin{document}
 
 
@@ -21,12 +23,27 @@
         & = & \int \frac{1/2}{1-x} + \frac{1/2}{1+x}\,dx \\
         \text{ using $\int \frac{1}{1-x}\,dx = -\ln \vert 1 - x \vert +C $ } \\
         & = & \frac{1}{2}\left( \ln \left\vert \frac{1+x}{1-x} \right\vert  \right) + c \\
-        
+        & = & \atanh{x} \\ 
       \end{eqnarray*}
     \end{KA}
+\end{QAP}
 
-
-
+\begin{QAP}
+  \begin{KQ}
+    Derive 
+    \begin{equation}
+      \atanh x = \frac{1}{2} \ln \left\vert \frac{1+x}{1-x}\right\vert \\
+    \end{equation}
+  \end{KQ}
+  \begin{KA}
+    \begin{eqnarray*}
+      \tanh(x) & = & \frac{e^x - e^{-x}}{e^x + e^{-x}} \\ 
+      \tanh(\ln x) & = & \frac{e^{\ln x } - e^{-\ln x}}{e^{\ln x} + e^{-\ln x}}\\
+      & = & \frac{ x - \frac{1}{x}}{x + \frac{1}{x}} \\ 
+               & = & \frac{\frac{x^2-1}{\cancel{x}}}{\frac{x^2+1}{\cancel{x}}} \\
+      \tanh(\ln x) & = & \frac{x^2-1}{x^2+1} \\
+    \end{eqnarray*}
+  \end{KA}
 \end{QAP}
 
 
