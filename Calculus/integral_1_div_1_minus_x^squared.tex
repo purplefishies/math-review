@@ -1,0 +1,44 @@
+\ifdefined\MASTERDOCUMENT
+\else
+\documentclass{article}
+\input{header}
+\begin{document}
+
+
+\begin{QAP}
+
+  \begin{KQ}
+      \begin{equation}
+        \label{integral:}
+        \int \frac{1}{1 - x^2} \,dx        
+      \end{equation}
+  \end{KQ}
+    \begin{KA}
+      \begin{eqnarray*}
+        \label{derivation:}
+        \int \frac{1}{1 - x^2}\,dx & = & \int \frac{A}{1-x}+\frac{B}{1+x}\,dx \\
+        \text{use separate fractions} \\
+        & = & \int \frac{1/2}{1-x} + \frac{1/2}{1+x}\,dx \\
+        \text{ using $\int \frac{1}{1-x}\,dx = -\ln \vert 1 - x \vert +C $ } \\
+        & = & \frac{1}{2}\left( \ln \left\vert \frac{1+x}{1-x} \right\vert  \right) + c \\
+        
+      \end{eqnarray*}
+    \end{KA}
+
+
+
+\end{QAP}
+
+
+
+
+
+
+
+
+\fi
+\ifdefined\MASTERDOCUMENT
+\endinput
+\else
+\expandafter\enddocument
+\fi
