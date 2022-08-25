@@ -1,0 +1,106 @@
+\ifdefined\MASTERDOCUMENT
+\else
+\documentclass{article}
+
+\input{header}
+
+\usepackage[normalem]{ulem}
+% \usepackage{amsmath}
+% \newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+\fi
+
+\begin{QAP}
+  \begin{KQ}
+    \begin{equation*}
+      16^x + 20^x = 25^x 
+    \end{equation*}
+  \end{KQ}
+  \begin{KA}
+
+    \begin{eqnarray*}
+      ( 4 \cdot 5 )^x & = &  4^x \cdot 5^x  \\
+      \text{now we have  } \\
+      16^x + 20^x &=& 25^x \\
+      4^x4^x + 4^x5^x &= &5^x5^x \\ 
+      4^x4^x &=& 5^x5^x - 4^x5^x \\
+      4^x4^x &=& 5^x ( 5^x - 4^x) \\
+    \end{eqnarray*}
+
+
+    \begin{eqnarray*}
+      a\cdot a + a \cdot b &= &b \cdot b\\
+      a & = & 4^x \\
+      b & = & 5^x \\
+      \ln a & = & x \ln 4 \\
+      \ln b & = & x \ln 5 \\
+      \ln a - \ln b & = & x \ln 4 - x \ln 5 \\
+      \ln a + \ln b & = & x \ln 4 + x \ln 5 \\
+      \frac{\ln a}{\ln b } & = & \frac{\ln 4}{\ln 5} \\
+      \ln \left(a - b \right)  & = & \frac{\ln 4}{\ln 5} \\
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      \ln ( 4^x - 5^x ) & = & \frac{ln 4}{ln 5} \\
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+      \frac{\ln 4^x}{\ln 5^x} & = & \\
+      \frac{ x \ln 4 }{ x \ln 5 } & = & \frac{\ln 4}{\ln 5} \\
+    \end{eqnarray*}
+
+
+    \begin{eqnarray*}
+      \frac{\ln b}{\ln a } & = & \frac{\ln 5}{\ln 4} \\
+      \ln (b - a)& = & \frac{\ln 5}{\ln 4} \\
+      \ln (5^x - 4^x) & = & \frac{\ln 5}{\ln 4} \\
+    \end{eqnarray*}
+
+
+    \begin{eqnarray*}
+      4^x ( 4^x + 5^x ) & = & 5^x 5^x \\
+      \sout{\ln 4^x + \ln ( 4^x + 5^x )} & = & 5^x 5^x \\
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+      4^x4^x &=& 5^x5^x - 4^x5^x \\
+      \ln 4^x 4^x & = & \ln 5^x \ln ( 5^x - 4^x)
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+      \ln ( 16^x ) & = & \ln 5^x \frac{\ln 5}{\ln 4} \\
+      \ln ( 4^x 4^x ) & = & \ln 5^x \frac{\ln 5}{\ln 4} \\
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+ 16^x &=& e^{\ln 5^x}e^{\frac{\ln 5}{\ln 4}} \\
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      16^x & = & 5^x \frac{5}{4}
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+      16^x = e^{\ln (16^x)} 
+    \end{eqnarray*}
+
+    \begin{eqnarray*}
+      e^{\ln 16^x } & = & e^{\ln \left( 5^x \frac{5}{4} \right)} \\
+    \end{eqnarray*}
+    \begin{eqnarray*}
+     x \ln 16 & = & \ln 5^x + \ln \frac{5}{4} \\
+    \end{eqnarray*}
+    \begin{eqnarray*}
+      x \ln 16 & = & x \ln 5 + \ln \frac{5}{4} \\
+      x \left( \ln 16 - \ln 5) & = & \ln \frac {5}{4} \\
+      x & = & \frac{ \ln \frac {5}{4}}{ \ln 16 - \ln 5 }
+    \end{eqnarray*}
+
+  \end{KA}
+\end{QAP}
+
+
+\ifdefined\MASTERDOCUMENT
+\endinput
+\else
+\expandafter\enddocument
+\fi
